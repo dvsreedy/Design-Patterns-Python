@@ -1,3 +1,7 @@
+'''
+Factory Method Pattern: Defines an interface for creating objects, allowing subclasses to decide which class to instantiate.
+'''
+
 from abc import ABC, abstractmethod
 
 class Localizer(ABC):
