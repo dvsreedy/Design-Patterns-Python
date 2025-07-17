@@ -9,6 +9,9 @@ class Singleton:
     _instance = None
     _lock = threading.Lock()  # Add a lock object for thread safety
 
+    # Usually, when we create an object, it is getting created,
+    #  first new is called, then init inside new, that's the way 
+    # To make the constructor private so that no one can call it.
     def __new__(cls, *args, **kwargs):
         if cls._instance is None:  # First check without locking
             with cls._lock:  # Acquire lock
